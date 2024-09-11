@@ -26,6 +26,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Server is running");
+})
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
